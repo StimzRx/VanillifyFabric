@@ -3,6 +3,7 @@ package dev.venomcode.vanillify.mixins.packets;
 import dev.venomcode.vanillify.api.interfaces.BlockStateProxy;
 import it.unimi.dsi.fastutil.shorts.ShortSet;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.listener.ClientPlayPacketListener;
@@ -43,6 +44,12 @@ public abstract class ChunkDeltaPacketMixin implements Packet<ClientPlayPacketLi
         }
 
         blockStates = replacementStates;
+    }
+
+    @Inject( method = "write", at = @At( value = "HEAD") )
+    public void onWriteInjection(PacketByteBuf buf, CallbackInfo ci)
+    {
+        doInitProxy();
     }
 
     @Inject( method = "<init>(Lnet/minecraft/network/PacketByteBuf;)V", at = @At("RETURN") )

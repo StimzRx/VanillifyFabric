@@ -3,6 +3,7 @@ package dev.venomcode.vanillify.mixins.packets;
 import dev.venomcode.vanillify.api.interfaces.BlockStateProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.listener.ClientPlayPacketListener;
