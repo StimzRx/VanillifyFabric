@@ -1,3 +1,6 @@
+# IMPORTANT NOTICE
+This project is retired. I unfortunately dont have the time to upkeep and update it anymore and havent for awhile. For an alternative, see [polymer](https://github.com/Patbox/polymer)
+
 # Vanillify
 Vanillify is a server-side library that allows fully-modded blocks on fabric servers, yet still allows vanilla minecraft clients to connect!
 
